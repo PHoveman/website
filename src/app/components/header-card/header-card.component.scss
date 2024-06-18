@@ -1,0 +1,11 @@
+@use './../../../assets/variables' as *;
+
+.header {
+  width: fit-content;
+  background-color: $black;
+  color: $white;
+  border-radius: 2px;
+  padding: 0.25rem 0.5rem;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+}

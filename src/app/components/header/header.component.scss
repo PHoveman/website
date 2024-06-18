@@ -1,0 +1,130 @@
+@use './../../../assets/variables' as *;
+
+@mixin slide-in($delay) {
+  animation-name: slideIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-delay: $delay;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  svg {
+    transition: 120ms ease-in-out;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .diamond {
+    margin-right: 1rem;
+    width: 20px;
+    height: 20px;
+    background: black;
+    transform: rotate(45deg);
+    transition: 200ms ease-in-out;
+    z-index: 2;
+    cursor: pointer;
+
+    &.active {
+      transform: rotate(135deg) scale(1.25);
+      opacity: 0.85;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    }
+  }
+
+  ul {
+    position: absolute;
+    top: 3rem;
+    right: -0.5rem;
+    width: 200px;
+    background: transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0s 200ms, opacity 200ms ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  
+    @keyframes slideIn {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0%);
+        opacity: 1;
+      }
+    }
+
+    li {
+      background: $black;
+      padding: 0.25rem 0.5rem;
+      border-radius: 2px 0 0 2px;
+      font-size: 32px;
+      display: flex;
+      transition: 80ms ease-in;
+      position: relative;
+      z-index: 1;
+  
+      &.disabled {
+        background: $grey;
+        pointer-events: none;
+      }
+  
+      a {
+        width: 100%;
+        height: 100%;
+        color: $white;
+        transition: 120ms ease-in-out;
+        z-index: 1;
+
+        &:hover {
+          opacity: 0.85;
+        }
+      }
+    }
+  
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 120ms ease-in-out;
+
+      li {
+        &.slide-in-1 {
+          @include slide-in(0s);
+        }
+        &.slide-in-2 {
+          @include slide-in(80ms);
+        }
+        &.slide-in-3 {
+          @include slide-in(160ms);
+        }
+        &.slide-in-4 {
+          @include slide-in(240ms);
+        }
+        &.slide-in-5 {
+          @include slide-in(320ms);
+        }
+      }
+    }
+  }  
+}

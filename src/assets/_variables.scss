@@ -1,0 +1,10 @@
+$black: #111010;
+$grey: #6B6B6B;
+$white: #F7F7F7;
+$background: #f8f4e4;
+
+@mixin disableTextSelection() {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

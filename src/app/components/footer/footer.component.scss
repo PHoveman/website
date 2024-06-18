@@ -1,0 +1,33 @@
+@use './../../../assets/variables' as *;
+
+footer {
+  min-height: 60px;
+  width: 100%;
+  border-top: 1px solid $grey;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  font-weight: 100;
+  font-size: 12px;
+
+  a, p {
+    color: $black;
+  }
+
+  a:hover {
+    opacity: 0.85;
+  }
+
+  .diamond {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    transform: rotate(45deg) translateX(-50%);
+    background: $background;
+    top: -6px;
+    left: 50%;
+    border: 1px solid $grey;
+  }
+}

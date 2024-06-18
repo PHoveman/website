@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/variables';
+
+@font-face {
+  font-family: 'main-font';
+  src: url('./assets/Inria_Serif/InriaSerif-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: $background;
+  font-family: "main-font", Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
