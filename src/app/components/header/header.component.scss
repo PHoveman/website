@@ -59,7 +59,7 @@ header {
     background: transparent;
     opacity: 0;
     visibility: hidden;
-    transition: visibility 0s 200ms, opacity 200ms ease-in-out;
+    transition: visibility 0s 120ms, opacity 120ms ease-in-out;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -113,16 +113,16 @@ header {
           @include slide-in(0s);
         }
         &.slide-in-2 {
-          @include slide-in(80ms);
+          @include slide-in(40ms);
         }
         &.slide-in-3 {
-          @include slide-in(160ms);
+          @include slide-in(80ms);
         }
         &.slide-in-4 {
-          @include slide-in(240ms);
+          @include slide-in(120ms);
         }
         &.slide-in-5 {
-          @include slide-in(320ms);
+          @include slide-in(160ms);
         }
       }
     }

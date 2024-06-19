@@ -2,7 +2,7 @@ import { NgClass } from '@angular/common';
 import { Component, InputSignal, input } from '@angular/core';
 import { HeaderCardComponent } from '../header-card/header-card.component';
 
-type CardClassTypes = 'list' | 'text' | ''
+type CardClassTypes = 'list' | 'text' | 'experience' | ''
 
 @Component({
   selector: 'app-card',
