@@ -20,6 +20,11 @@ header {
     transition: 120ms ease-in-out;
     cursor: pointer;
 
+    @media only screen and (max-width: 600px) {
+      width: 80px;
+      height: 40px;
+    }
+
     &:focus {
       outline: none;
     }
