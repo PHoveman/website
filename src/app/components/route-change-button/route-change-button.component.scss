@@ -1,0 +1,27 @@
+@use './../../../assets/variables' as *;
+
+div {
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    font-family: inherit;
+    background: transparent;
+    color: $black;
+    padding: 0.5rem;
+    border: none;
+    border: 1px solid $black;
+    text-transform: uppercase;
+    border-radius: 2px;
+    letter-spacing: 1.25px;
+    cursor: pointer;
+    transition: 120ms ease-in;
+
+    &:hover {
+      color: $grey;
+      border-color: $grey;
+    }
+  }
+}

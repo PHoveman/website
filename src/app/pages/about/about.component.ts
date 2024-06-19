@@ -2,11 +2,12 @@ import { Component, signal } from '@angular/core';
 import { CardComponent } from '../../components/card/card.component';
 import { ExperienceCardComponent } from '../../components/experience-card/experience-card.component';
 import { FooterComponent } from '../../components/footer/footer.component';
+import { RouteChangeButtonComponent } from '../../components/route-change-button/route-change-button.component';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CardComponent, FooterComponent, ExperienceCardComponent],
+  imports: [CardComponent, FooterComponent, ExperienceCardComponent, RouteChangeButtonComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })
