@@ -20,7 +20,7 @@ export class AboutComponent {
     'RxJs',
     'Angular state management (NgXs & NgRx)',
     'Angular libraries',
-    'testing Tools (Cypress, Jasmine, Jest)',
+    'Testing tools (Cypress, Jasmine, Jest)',
     'React',
     'Next.js'
   ])
@@ -34,6 +34,6 @@ export class AboutComponent {
   otherSkillsArr = signal<string[]>([
     'Figma',
     'Adobe illustrator',
-    'Versioning (Git, Jira, Bitbucket'
+    'Versioning (Git, Jira, Bitbucket)'
   ])
 }
